@@ -1,2 +1,8 @@
 /target
 Cargo.lock
+
+/.vscode/*
+!/.vscode/launch.json
+
+/lib/*
+!/lib/.gitkeep
