@@ -1,7 +1,7 @@
 pub mod vt {
     use std::{ffi::CStr, os::raw::c_char};
 
-    //#[link(name = "vga-terminald")]
+    //#[link(name = "vga-terminal")]
     extern {
         fn VGA_TERMINAL_version() -> *const c_char;
     }
