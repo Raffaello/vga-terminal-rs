@@ -1,2 +1,10 @@
 /target
 Cargo.lock
+
+/.vscode/*
+!/.vscode/launch.json
+
+/lib/*
+!/lib/.gitkeep
+
+setup_env.ps1
