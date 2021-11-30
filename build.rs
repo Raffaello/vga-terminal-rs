@@ -12,10 +12,10 @@ fn get_output_path() -> PathBuf {
 }
 
 fn main () {
-    println!("cargo:warning=CWD is {:?}", env::current_dir().unwrap());
-    println!("cargo:warning=OUT_DIR is {:?}", env::var("OUT_DIR").unwrap());
-    println!("cargo:warning=CARGO_MANIFEST_DIR is {:?}", env::var("CARGO_MANIFEST_DIR").unwrap());
-    println!("cargo:warning=PROFILE is {:?}", env::var("PROFILE").unwrap());
+    //println!("cargo:warning=CWD is {:?}", env::current_dir().unwrap());
+    //println!("cargo:warning=OUT_DIR is {:?}", env::var("OUT_DIR").unwrap());
+    //println!("cargo:warning=CARGO_MANIFEST_DIR is {:?}", env::var("CARGO_MANIFEST_DIR").unwrap());
+    //println!("cargo:warning=PROFILE is {:?}", env::var("PROFILE").unwrap());
 
     let target_os = env::var("CARGO_CFG_TARGET_OS");
     match target_os.as_ref().map(|x| &**x) {
@@ -24,7 +24,7 @@ fn main () {
     }
 
     let od = get_output_path();
-    println!("cargo:warning=OUT_DIR is {:?}", od);
+    println!("cargo:warning=OUT_DIR is {:#?}", od);
 
     let build_type = env::var("PROFILE");
     // unable to copy the DLL in the OUT_DIR, so need to be copied manually.
@@ -42,9 +42,4 @@ fn main () {
         }
         _tos => panic!("not supported profile")
     }
-
-    
-
-    
-    
 }

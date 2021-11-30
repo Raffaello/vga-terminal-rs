@@ -6,3 +6,5 @@ Cargo.lock
 
 /lib/*
 !/lib/.gitkeep
+
+setup_env.ps1

@@ -1,6 +1,6 @@
 [package]
 name = "vga-terminal-rs"
-version = "0.4.0"
+version = "0.4.1"
 edition = "2021"
 links = "vga-terminal"
 build = "build.rs"
@@ -8,3 +8,22 @@ build = "build.rs"
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
 [dependencies]
+sdl2 = "0.35.1"
+
+#[dependencies.sdl2]
+#version = "0.35.1"
+#default-features = false
+#features = ["use-vcpkg"]
+
+#[package.metadata.vcpkg]
+#dependencies = ["sdl2"]
+#git = "https://github.com/microsoft/vcpkg"
+#rev = "261c458af6e3eed5d099144aff95d2b5035f656b"
+#branch = "master"
+
+#[package.metadata.vcpkg.target]
+#x86_64-pc-windows-msvc = { triplet = "x64-windows" }
+
+
+[[example]]
+name = "hello_world"
