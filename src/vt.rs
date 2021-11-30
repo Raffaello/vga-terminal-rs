@@ -1,7 +1,7 @@
 pub mod vt {
     use std::{ffi::{CStr, c_void}, os::raw::c_char};
 
-    pub type VGATerminal = *const c_void;
+    pub type VGATerminal = *mut c_void;
 
     //#[link(name = "vga-terminal")]
     extern "C" {
@@ -17,7 +17,8 @@ pub mod vt {
     }
 
     pub fn vt_init() -> VGATerminal {
-        unsafe { VGA_TERMINAL_init() }
+        let v = unsafe { VGA_TERMINAL_init() };
+        return v;
     }
 
     pub fn vt_destroy(term: VGATerminal) {

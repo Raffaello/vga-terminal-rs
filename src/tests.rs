@@ -24,8 +24,8 @@ mod tests {
         let timer_subsystem = sdl_context.timer().unwrap();
         let wb = video_subsystem.window("title", 320, 200);
         let w = wb.build().unwrap();
-        
-        std::thread::sleep(std::time::Duration::from_millis(1000));
+        //video_subsystem.
+        //std::thread::sleep(std::time::Duration::from_millis(1000));
         let term = vt_init();
         assert_ne!(term, ptr::null_mut());
         vt_destroy(term);
